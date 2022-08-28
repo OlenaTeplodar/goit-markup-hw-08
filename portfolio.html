@@ -16,18 +16,24 @@
 <body>
 
     <!-- HEADER -->
-    <header>
+<header class="header">
         <div class="page-header container">
             <nav class="page-nav">
                 <a href="./index.html" class="logo logo__header link"> <span class="logo__header_accent">Web</span>Studio</a>
-                <ul class="menu list">
+                <ul class="menu__list list">
                     <li class="menu__item"><a href="./index.html" class="menu__link link">Студия</a> </li>
                     <li class="menu__item"><a href="./portfolio.html" class="menu__link link menu__link_current">Портфолио</a></li>
                     <li class="menu__item"><a href="./index.html" class="menu__link link">Контакты</a></li>
                 </ul>
             </nav>
 
-            <ul class="contact-header list">
+            <button class="mobile-menu-open" type="button" data-menu-open>
+                <svg class="mobile-menu-open__icon" width="40" height="40" aria-label="переключатель мобильного меню">
+                <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+
+                        <ul class="contact-header list">
                 <li class="contact-header__link"><a href="mailto:info@devstudio.com" class="contact__link link">
                     <svg class="contact__icon" width="16" height="12">
                         <use href="./images/icons.svg#envelope"></use>
@@ -40,6 +46,41 @@
                     +38 096 111 11 11</a></li>
             </ul>
         </div>
+<!-- MOBILE-MENU -->
+
+            <div class="mobile-menu" data-menu>
+                <div class="container mobile-menu__container">
+                    <button type="button" class="mobile-menu__close-btn" data-menu-close>
+                        <svg class="mobile-menu__close-icon" width="40" height="40" aria-label="переключатель мобильного меню">
+                            <use href="./images/icons.svg#icon-close"></use>
+                        </svg>
+                    </button>
+
+                    <ul class="mobile-menu__list list">
+                    <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link link">Студия</a> </li>
+                    <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__link link mobile-menu__link_current">Портфолио</a></li>
+                    <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link link">Контакты</a></li>
+                </ul>
+
+                <ul class="mobile-contact-header list">
+
+                <li class="mobile-contact-header__tel"><a href="tel:+380961111111" class="mobile-contact__link-tel link">
+                    +38 096 111 11 11</a></li>
+
+                <li class="mobile-contact-header__email"><a href="mailto:info@devstudio.com" class="mobile-contact__link-email link">
+                    info@devstudio.com</a></li>
+                </ul>
+
+                <ul class="mobile-menu__social list">
+                    <li class="mobile-menu__social-item"><a href="" class="mobile-menu__social-link link">Instagram</a> </li>
+                    <li class="mobile-menu__social-item"><a href="" class="mobile-menu__social-link link">Twitter</a> </li>
+                    <li class="mobile-menu__social-item"><a href="" class="mobile-menu__social-link link">Facebook</a> </li>
+                    <li class="mobile-menu__social-item"><a href="" class="mobile-menu__social-link link">LinkedIn</a> </li>
+                </ul>
+
+                </div>
+            </div>
+
     </header>
 
 <!--------------------- MAIN ----------------->
@@ -74,7 +115,18 @@
                     <li class="cards-item list">
                         <a class="cards-item__link link" href="">
                             <div class="cards-overlay">
-                            <img src="./portfolio-images/project1.jpg" alt="ноутбук" width="370">
+                                <picture>
+                                    <source srcset="./images/desktop/portfolio/technokryak-370.jpg 1x,
+./images/desktop/portfolio/technokryak-370@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tablet/portfolio/technokryak-354.jpg 1x,
+                        ./images/tablet/portfolio/technokryak-354@2x.jpg 2x"
+                                    media="(min-width: 768px)"/>
+                                    <source srcset="./images/mobile/portfolio/technocryak-450.jpg 1x,
+                        ./images/mobile/portfolio/technocryak-450@2x.jpg 2x"
+                                    media="(max-width: 767px)"/>
+                                <img class="portfolio__pic" src="./images/desktop/portfolio/technokryak-370.jpg" alt="Технокряк"/>
+                                </picture>
+
                             <p class="cards-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
                             <div class="cards__description">
@@ -87,7 +139,18 @@
                     <li class="cards-item list">
                         <a class="cards-item__link link" href="">
                             <div class="cards-overlay">
-                            <img src="./portfolio-images/project2.jpg" alt="баскетболисты" width="370">
+                                <picture>
+                                    <source srcset="./images/desktop/portfolio/poster-new-orlean-370.jpg 1x,
+./images/desktop/portfolio/poster-new-orlean-370@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tablet/portfolio/poster-new-orlean-354.jpg 1x,
+                        ./images/tablet/portfolio/poster-new-orlean-354@2x.jpg 2x"
+                                    media="(min-width: 768px)"/>
+                                    <source srcset="./images/mobile/portfolio/poster-new-orlean-450.jpg 1x,
+                        ./images/mobile/portfolio/poster-new-orlean-450@2x.jpg 2x"
+                                    media="(max-width: 767px)"/>
+                                <img class="portfolio__pic" src="./images/desktop/portfolio/poster-new-orlean-370.jpg" alt="Постер Нью Орлеан"/>
+                                </picture>
+                            
                             <p class="cards-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
                             <div class="cards__description">
@@ -100,7 +163,18 @@
                     <li class="cards-item list">
                         <a class="cards-item__link link" href="">
                             <div class="cards-overlay">
-                            <img src="./portfolio-images/project3.jpg" alt="логотип рыбного ресторана" width="370">
+                                <picture>
+                                    <source srcset="./images/desktop/portfolio/seafood-370.jpg 1x,
+./images/desktop/portfolio/seafood-370@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tablet/portfolio/seafood-354.jpg 1x,
+                        ./images/tablet/portfolio/seafood-354@2x.jpg 2x"
+                                    media="(min-width: 768px)"/>
+                                    <source srcset="./images/mobile/portfolio/seafood-450.jpg 1x,
+                        ./images/mobile/portfolio/seafood-450@2x.jpg 2x"
+                                    media="(max-width: 767px)"/>
+                                <img class="portfolio__pic" src="./images/desktop/portfolio/seafood-370.jpg" alt="логотип рыбного ресторана"/>
+                                </picture>
+
                             <p class="cards-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
                             <div class="cards__description">
@@ -113,7 +187,18 @@
                     <li class="cards-item list">
                         <a class="cards-item__link link" href="">
                             <div class="cards-overlay">
-                            <img src="./portfolio-images/project4.jpg" alt="наушники" width="370">
+                                <picture>
+                                    <source srcset="./images/desktop/portfolio/prime-370.jpg 1x,
+./images/desktop/portfolio/prime-370@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tablet/portfolio/prime-354.jpg 1x,
+                        ./images/tablet/portfolio/prime-354@2x.jpg 2x"
+                                    media="(min-width: 768px)"/>
+                                    <source srcset="./images/mobile/portfolio/prime-450.jpg 1x,
+                        ./images/mobile/portfolio/prime-450@2x.jpg 2x"
+                                    media="(max-width: 767px)"/>
+                                <img class="portfolio__pic" src="./images/desktop/portfolio/prime-370.jpg" alt="наушники"/>
+                                </picture>
+
                             <p class="cards-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
                             <div class="cards__description">
@@ -126,7 +211,18 @@
                     <li class="cards-item list">
                         <a class="cards-item__link link" href="">
                             <div class="cards-overlay">
-                            <img src="./portfolio-images/project5.jpg" alt="две коробки" width="370">
+                                <picture>
+                                    <source srcset="./images/desktop/portfolio/boxes-370.jpg 1x,
+./images/desktop/portfolio/boxes-370@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tablet/portfolio/boxes-354.jpg 1x,
+                        ./images/tablet/portfolio/boxes-354@2x.jpg 2x"
+                                    media="(min-width: 768px)"/>
+                                    <source srcset="./images/mobile/portfolio/boxes-450.jpg 1x,
+                        ./images/mobile/portfolio/boxes-450@2x.jpg 2x"
+                                    media="(max-width: 767px)"/>
+                                <img class="portfolio__pic" src="./images/desktop/portfolio/boxes-370.jpg" alt="две коробки"/>
+                                </picture>
+
                             <p class="cards-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
                             <div class="cards__description">
@@ -139,7 +235,18 @@
                     <li class="cards-item list">
                         <a class="cards-item__link link" href="">
                             <div class="cards-overlay">
-                            <img src="./portfolio-images/project6.jpg" alt="монитор компьютера" width="370">
+                                <picture>
+                                    <source srcset="./images/desktop/portfolio/inspiration-370.jpg 1x,
+./images/desktop/portfolio/inspiration-370@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tablet/portfolio/inspiration-354.jpg 1x,
+                        ./images/tablet/portfolio/inspiration-354@2x.jpg 2x"
+                                    media="(min-width: 768px)"/>
+                                    <source srcset="./images/mobile/portfolio/inspiration-450.jpg 1x,
+                        ./images/mobile/portfolio/inspiration-450@2x.jpg 2x"
+                                    media="(max-width: 767px)"/>
+                                <img class="portfolio__pic" src="./images/desktop/portfolio/inspiration-370.jpg" alt="монитор компьютера"/>
+                                </picture>
+
                             <p class="cards-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
                             <div class="cards__description">
@@ -152,7 +259,18 @@
                     <li class="cards-item list">
                         <a class="cards-item__link link" href="">
                             <div class="cards-overlay">
-                            <img src="./portfolio-images/project7.jpg" alt="разворот журнала" width="370">
+                                <picture>
+                                    <source srcset="./images/desktop/portfolio/limited-edition-370.jpg 1x,
+./images/desktop/portfolio/limited-edition-370@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tablet/portfolio/limited-edition-354.jpg 1x,
+                        ./images/tablet/portfolio/limited-edition-354@2x.jpg 2x"
+                                    media="(min-width: 768px)"/>
+                                    <source srcset="./images/mobile/portfolio/limited-edition-450.jpg 1x,
+                        ./images/mobile/portfolio/limited-edition-450@2x.jpg 2x"
+                                    media="(max-width: 767px)"/>
+                                <img class="portfolio__pic" src="./images/desktop/portfolio/limited-edition-370.jpg" alt="разворот журнала"/>
+                                </picture>
+
                             <p class="cards-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
                             <div class="cards__description">
@@ -165,7 +283,18 @@
                     <li class="cards-item list">
                         <a class="cards-item__link link" href="">
                             <div class="cards-overlay">
-                            <img src="./portfolio-images/project8.jpg" alt="бумажный ярлык" width="370">
+                                <picture>
+                                    <source srcset="./images/desktop/portfolio/lab-370.jpg 1x,
+./images/desktop/portfolio/lab-370@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tablet/portfolio/lab-354.jpg 1x,
+                        ./images/tablet/portfolio/lab-354@2x.jpg 2x"
+                                    media="(min-width: 768px)"/>
+                                    <source srcset="./images/mobile/portfolio/lab-450.jpg 1x,
+                        ./images/mobile/portfolio/lab-450@2x.jpg 2x"
+                                    media="(max-width: 767px)"/>
+                                <img class="portfolio__pic" src="./images/desktop/portfolio/lab-370.jpg" alt="бумажный ярлык"/>
+                                </picture>
+
                             <p class="cards-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
                             <div class="cards__description">
@@ -178,7 +307,18 @@
                     <li class="cards-item list">
                         <a class="cards-item__link link" href="">
                             <div class="cards-overlay">
-                            <img src="./portfolio-images/project9.jpg" alt="работа за ноутбуком" width="370">
+                                <picture>
+                                    <source srcset="./images/desktop/portfolio/growing-business-370.jpg 1x,
+./images/desktop/portfolio/growing-business-370@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tablet/portfolio/growing-business-354.jpg 1x,
+                        ./images/tablet/portfolio/growing-business-354@2x.jpg 2x"
+                                    media="(min-width: 768px)"/>
+                                    <source srcset="./images/mobile/portfolio/growing-business-450.jpg 1x,
+                        ./images/mobile/portfolio/growing-business-450@2x.jpg 2x"
+                                    media="(max-width: 767px)"/>
+                                <img class="portfolio__pic" src="./images/desktop/portfolio/growing-business-370.jpg" alt="работа за ноутбуком"/>
+                                </picture>
+
                             <p class="cards-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
                             <div class="cards__description">
@@ -194,9 +334,11 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div>
+        <footer class="footer section">
+        <div class="footer__container container">
+            <div class="footer__container_tablet">
+
+            <div class="footer__adress">
             <a href="./index.html" class=" logo logo__footer link"> <span class="logo__footer_accent">Web</span>Studio</a>
             <address>
                 <ul class="footer__list list">
@@ -239,9 +381,10 @@
                     </li>
                 </ul>
             </div>
+            </div>
             <div class="footer-form">
                 <p class="footer-invitation__text">Подпишитесь на рассылку</p>
-                <form>
+                <form class="footer-form__label">
                     <label class="email-field">
                         <input type="email" class="email-field__input" name="email" placeholder="E-mail" required>
                         <button type="submit" class="email-field__btn-submit">Подписаться
@@ -254,6 +397,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

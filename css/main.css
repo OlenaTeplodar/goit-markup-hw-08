@@ -816,16 +816,13 @@ h2 {
 
 .footer {
   background-color: var(--dark-background);
-  padding-top: 60px;
-  padding-bottom: 60px;
   display: block;
 }
 
 .footer__container {
   display: flex;
-  align-items: baseline;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 
 .adress {
@@ -858,9 +855,11 @@ h2 {
 }
 
 .footer-invitation {
-  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
 }
 .footer-invitation__text {
+  text-align: center;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
@@ -872,6 +871,7 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 10px;
+  padding-bottom: 60px;
 }
 
 .footer-social-list__link {
@@ -894,23 +894,30 @@ h2 {
 }
 
 @media screen and (min-width: 768px) {
-  .footer__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 60px;
-  }
   .footer-adress {
     margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer__adress {
-    margin-left: 76px;
+  .footer__container_tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
+  .footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 0px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .footer__container_tablet {
+    display: flex;
+  }
   .footer__adress {
     text-align: left;
     margin-right: 70px;
@@ -918,20 +925,11 @@ h2 {
   .footer__item:not(:last-child) {
     margin-bottom: 9px;
   }
-  .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  .footer__container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    flex-wrap: nowrap;
-    gap: 0px;
-  }
 }
 .footer-form {
   text-align: center;
+  width: 100%;
+  align-items: center;
 }
 
 .email-field__input {
@@ -955,6 +953,8 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 20px;
   width: 200px;
   height: 50px;
@@ -980,7 +980,16 @@ h2 {
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer-email__group {
+  .footer__container {
+    display: flex;
+  }
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 570px;
+  }
+  .email-field {
     display: flex;
   }
   .email-field__input {
@@ -990,6 +999,9 @@ h2 {
   }
   .footer-invitation__text {
     text-align: left;
+  }
+  .email-field__btn-submit {
+    margin-top: 0;
   }
 }
 .filter {

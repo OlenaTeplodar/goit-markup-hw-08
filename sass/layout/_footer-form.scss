@@ -1,16 +1,12 @@
 .footer-form {
-  // margin-left: auto;
-  // display: block;
   text-align: center;
+  width: 100%;
+  align-items: center;
 }
 
 
-.email-field {
-  // display: flex;
-}
 .email-field__input {
   display: block;
-  // align-items: center;
   width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -33,8 +29,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 20px;
-  // margin-left: 12px;
   width: 200px;
   height: 50px;
   background-color: var(--title-text-color-accent);
@@ -60,7 +57,18 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .footer-email__group {
+  .footer__container {
+    display: flex;
+    // flex-direction: column;
+    // flex-wrap: nowrap;
+  }
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 570px;
+  }
+  .email-field {
     display: flex;
   }
   .email-field__input {
@@ -70,5 +78,9 @@
   }
   .footer-invitation__text {
     text-align: left;
+  }
+
+  .email-field__btn-submit {
+    margin-top: 0;
   }
 }
