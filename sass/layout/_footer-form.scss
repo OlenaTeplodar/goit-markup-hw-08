@@ -1,7 +1,6 @@
 .footer-form {
   text-align: center;
-  width: 100%;
-  align-items: center;
+  align-items: baseline;
 }
 
 
@@ -53,7 +52,13 @@
   }
   .email-field__input {
     width: 450px;
+  margin-left: auto;
+  margin-right: auto;
   }
+
+  // .email-field {
+  //     text-align: center;
+  // }
 }
 
 @media screen and (min-width: 1200px) {

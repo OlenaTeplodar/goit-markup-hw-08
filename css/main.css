@@ -49,6 +49,7 @@ ol {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 0;
+  padding: 0;
 }
 
 button {
@@ -82,8 +83,6 @@ h2 {
 }
 
 .title {
-  font-size: 28px;
-  line-height: 1.17;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -91,10 +90,6 @@ h2 {
 @media screen and (min-width: 1200px) {
   .button {
     padding: 10px 32px;
-  }
-  .title {
-    font-size: 36px;
-    margin-bottom: 50px;
   }
 }
 .container {
@@ -135,7 +130,6 @@ h2 {
 
 @media screen and (min-width: 1200px) {
   .logo {
-    margin-right: 93px;
     font-size: 26px;
     line-height: 1.2;
   }
@@ -143,8 +137,16 @@ h2 {
 .section-title {
   text-align: center;
   margin-bottom: 50px;
+  font-size: 28px;
+  line-height: 1.33;
 }
 
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
 .backdrop {
   position: fixed;
   z-index: 100;
@@ -203,10 +205,10 @@ h2 {
   transition: fill var(--transition-dur-func);
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal {
-    min-width: 450px;
     min-height: 609px;
+    min-width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -375,13 +377,12 @@ h2 {
 .page-header {
   height: 60px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .mobile-menu-open {
   padding: 0;
-  margin-right: 0;
+  margin-left: auto;
   background-color: transparent;
   border: none;
   line-height: 0;
@@ -575,6 +576,9 @@ h2 {
 @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/hero-480@2x.jpg");
+    max-width: 480px;
+    padding: 118px 0;
+    height: 400px;
   }
 }
 @media screen and (min-resolution: 1dppx) and (min-width: 768px), screen and (min-resolution: 95dpi) and (min-width: 768px), screen and (min-device-pixel-ratio: 1) and (min-width: 768px) {
@@ -834,12 +838,6 @@ h2 {
   display: block;
 }
 
-.footer__container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
 .adress {
   font-style: normal;
   line-height: 1.71;
@@ -869,10 +867,6 @@ h2 {
   color: var(--title-text-color-accent);
 }
 
-.footer-invitation {
-  display: flex;
-  flex-direction: column;
-}
 .footer-invitation__text {
   text-align: center;
   font-weight: 700;
@@ -909,15 +903,14 @@ h2 {
 }
 
 @media screen and (min-width: 768px) {
-  .footer-adress {
-    margin-bottom: 0px;
+  .footer__adress {
+    margin-right: 60px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__container_tablet {
     display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
+    justify-content: space-around;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -934,7 +927,10 @@ h2 {
     display: flex;
   }
   .footer__adress {
-    text-align: left;
+    text-align: center;
+    margin-right: 70px;
+  }
+  .footer-invitation {
     margin-right: 70px;
   }
   .footer__item:not(:last-child) {
@@ -943,8 +939,7 @@ h2 {
 }
 .footer-form {
   text-align: center;
-  width: 100%;
-  align-items: center;
+  align-items: baseline;
 }
 
 .email-field__input {
@@ -992,6 +987,8 @@ h2 {
   }
   .email-field__input {
     width: 450px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1024,7 +1021,7 @@ h2 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .filter-btn {
@@ -1052,6 +1049,19 @@ h2 {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+@media screen and (max-width: 767px) {
+  .filter {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .filter {
+    margin-bottom: 50px;
+  }
+}
 .portfolio-cards {
   display: flex;
   flex-wrap: wrap;
@@ -1077,7 +1087,7 @@ h2 {
   line-height: 1.56;
   color: var(--white-color);
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform var(--transition-dur-func);
 }
 
@@ -1241,7 +1251,6 @@ h2 {
 
 @media screen and (max-height: 479px) {
   .container {
-    width: 100%;
     margin: 0 auto;
   }
   .mobile-menu__list {

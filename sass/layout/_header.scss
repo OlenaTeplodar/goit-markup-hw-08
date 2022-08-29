@@ -14,13 +14,12 @@ border-bottom: 1px solid var(--border-header);
 .page-header {
   height: 60px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .mobile-menu-open {
   padding: 0;
-  margin-right: 0;
+  margin-left: auto;
   background-color: transparent;
   border: none;
   line-height: 0;
