@@ -466,6 +466,11 @@ h2 {
     border-radius: 2px;
     background-color: var(--title-text-color-accent);
   }
+  .contact__link {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .menu__list {
