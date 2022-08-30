@@ -124,6 +124,7 @@ font-weight: 900;
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/tablet/hero-768@2x.jpg');
+      max-width: 768px;
   }
 }
 
